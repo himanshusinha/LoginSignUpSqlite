@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">SqliteLoginSignUP</string>
+    <string name="title_register">Not Registered ? Login Here</string>
+    <string name="title_login">Already Registered ? Login Now</string>
+    <string name="button_login">Login</string>
+    <string name="button_register">Register</string>
+    <string name="hint_username">Enter username</string>
+    <string name="hint_name">Enter name</string>
+    <string name="hint_password">Enter password</string>
+    <string name="hint_email">Enter email</string>
+    <string name="hint_mobile">Enter mobile</string>
+    <string name="hint_address">Enter address</string>
+    <string name="hint_male">Male</string>
+    <string name="hint_female">Female</string>
+    <string name="title_gender">Gender</string>
+    <string name="text_accounts">All Accounts</string>
+    <string name="text_hello">Hello,</string>
+    <string name="text_title">Android Tutorials Hub</string>
+    <string name="dialog_message">Do you want to Logout ?</string>
+    <string name="err_msg_name">Enter valid name</string>
+    <string name="err_msg_password">Enter  valid password</string>
+    <string name="err_msg_email">Enter valid email</string>
+    <string name="err_msg_mobile">Enter  valid mobile</string>
+    <string name="err_msg_date">Enter valid date</string>
+    <string name="err_msg_address">Enter valid address</string>
+    <string name="title_login_form">Login Form</string>
+    <string name="title_registeration_form">Registeration Form</string>
+
+</resources>
