@@ -70,19 +70,54 @@ public class RegisterActivity extends AppCompatActivity {
                 String email = inputEmail.getText().toString().trim();
                 String address = inputAddress.getText().toString().trim();
                 String mobile = inputMobileNo.getText().toString().trim();
+                if (TextUtils.isEmpty(username)) {
+                    inputName.setError("Please enter username");
+                    inputName.requestFocus();
+                    return;
+                }
 
-                if ((username.equals(""))) {
-                    Toast.makeText(RegisterActivity.this, "Enter username", Toast.LENGTH_SHORT).show();
-                } else if (pass.equals("")) {
-                    Toast.makeText(RegisterActivity.this, "Enter password", Toast.LENGTH_SHORT).show();
-                } else if (email.equals("")) {
-                    Toast.makeText(RegisterActivity.this, "Enter email", Toast.LENGTH_SHORT).show();
+                if (TextUtils.isEmpty(email)) {
+                    inputEmail.setError("Please enter email");
+                    inputEmail.requestFocus();
+                    return;
+                }
+                if (TextUtils.isEmpty(address)) {
+                    inputAddress.setError("Please enter address");
+                    inputAddress.requestFocus();
+                    return;
+                }
 
-                } else if (mobile.equals("")) {
-                    Toast.makeText(RegisterActivity.this, "Enter mobile", Toast.LENGTH_SHORT).show();
-                } else if (address.equals("")) {
-                    Toast.makeText(RegisterActivity.this, "Enter add", Toast.LENGTH_SHORT).show();
-                } else {
+                if (TextUtils.isEmpty(email)) {
+                    inputEmail.setError("Please enter email");
+                    inputEmail.requestFocus();
+                    return;
+                }
+                if (!android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+                    inputEmail.setError("Enter valid email");
+                    inputEmail.requestFocus();
+                    return;
+                }
+                if (TextUtils.isEmpty(pass)) {
+                    inputPassword.setError("Enter valid  password");
+                    inputPassword.requestFocus();
+                    return;
+                }
+                if (TextUtils.isEmpty(address)) {
+                    inputAddress.setError("Enter valid address");
+                    inputAddress.requestFocus();
+                    return;
+                }
+                if (TextUtils.isEmpty(mobile)) {
+                    inputMobileNo.setError("Please enter username");
+                    inputMobileNo.requestFocus();
+                    return;
+                }
+                if (TextUtils.isEmpty(pass)) {
+                    inputPassword.setError("Please enter username");
+                    inputPassword.requestFocus();
+                    return;
+                }
+                else {
                     long val = databaseHelper.adduser(username, pass, email, mobile, address, gender);
                     if (val > 0) {
                         Toast.makeText(RegisterActivity.this, "Register Successful", Toast.LENGTH_SHORT).show();
